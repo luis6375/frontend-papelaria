@@ -1,19 +1,19 @@
-import './styles.css'
-import Logo from '../../assets/img/logo.jpg'
-import Menu from '../../componentes/menu'
+import React from "react";
+import '../../global.css'
+import Head from "../componentes/head";
+import Menu from "../componentes/menu";
+
 
 export default function Dashboard(){
-   return(
-    <div className="dashboard-container">
-        <div className='menu'>
-     
-        <Menu />
-        </div>
-        <div className='principal'>
-        <h1>Página Principal</h1>
-        </div>
-    </div>
+    return(
+        <div className="dashboard-conteiner">
+            <div className="menu">
+                <Menu />
+            </div>
+            <div className="main">
+                <Head />
 
-   )
-
+            </div>
+        </div>
+    )
 }

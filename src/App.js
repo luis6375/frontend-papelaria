@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Routes from './routes';
+import Logon from '../src/pages/logon'
+import Dashboard from '../src/pages/dashboard'
 
 function App() {
-  return(
- <Routes />
-  )
+  return (
+    <div className="App">
+      <Dashboard/>
+    </div>
+  );
 }
 
 export default App;
