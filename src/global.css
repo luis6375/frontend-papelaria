@@ -140,7 +140,7 @@ body{
         filter:brightness(90%);
         cursor:pointer
     }
-    .btn-novo{
+       .btn-novo{
         margin-top: 10px;
         margin-bottom: 10px;
         margin-right: 100%;
@@ -155,17 +155,19 @@ body{
         text-decoration:none;
         font-size: 14px;
         transition: filter 0.2s;
+        
     }
     .btn-novo:hover{
         filter:brightness(90%);
         cursor:pointer
     }
     table{
-        font:400 16px 'Roboto', sans-serif;
+        font:400 16px 'Roboto', sans-serif; 
         margin: 0 auto;
+   
     }
     th, td {
-        border-bottom: 1px solid #96d4d4;
+        border-bottom: 1px solid #96D4D4;
         text-align: left;
         padding: 5px;
-    }
+      }
