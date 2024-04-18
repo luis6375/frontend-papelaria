@@ -10,9 +10,13 @@ import { FiEdit,FiTrash } from "react-icons/fi";
 export default function Listausuarios(){
 const navigate = useNavigate();
 const [usuarios,setUsuarios] = useState([]);
+const [quantidade,setQuantidade] = useEffect(0);
+
 function mostrarusuarios(){
     const banco = JSON.parse(localStorage.getItem("usuarios")|| "[]")
+    setQuantidade(banco.length)
     setUsuarios(banco);
+
 }
 function editarusuario(id){
  alert(`Estou editando usuário de id:${id}`)
@@ -34,6 +38,7 @@ function editarusuario(id){
                   }
                   )
                   localStorage.setItem("usuarios", JSON.stringify(dadosvelhos))
+                  mostrarusuarios();
               }
             },
             {
@@ -63,7 +68,7 @@ useEffect(()=>{
              <th>ID</th>
              <th>Nome</th>
              <th>Email</th>
-             <th></th>
+             <th>{quantidade}</th>
              <th></th>
             </tr>
             
@@ -87,7 +92,6 @@ useEffect(()=>{
      
            
            </table>
-
 
 
         </div>
